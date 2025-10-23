@@ -1,0 +1,19 @@
+/* === Button & Toggle Effects === */
+
+/* Hover glow (blue) */
+.button:hover, .toggle-button:hover {
+    -fx-effect: dropshadow(gaussian, #00bfff, 15, 0.4, 0, 0);
+    -fx-cursor: hand;
+}
+
+/* Active or selected glow (green) */
+.button:pressed, .toggle-button:selected {
+    -fx-effect: dropshadow(gaussian, #00ff88, 20, 0.6, 0, 0);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Smooth visual transitions and consistent background rendering */
+.button, .toggle-button {
+    -fx-background-insets: 0;
+}

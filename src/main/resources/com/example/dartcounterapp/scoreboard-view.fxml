@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.dartcounterapp.ScoreboardController"
+            style="-fx-background-color: radial-gradient(radius 100%, #0d0d0d, #1a1a1a);"
+            stylesheets="@style.css">
+
+    <center>
+        <VBox spacing="40" alignment="CENTER">
+
+            <Label text="🎯 DART COUNTER"
+                   style="-fx-font-size: 48px; -fx-font-weight: bold; -fx-text-fill: white;" />
+
+            <Label fx:id="matchFormatLabel" text="First to 3 Legs, 2 Sets"
+                   style="-fx-font-size: 26px; -fx-text-fill: #bbbbbb;" />
+
+            <HBox spacing="250" alignment="CENTER">
+
+                <VBox alignment="CENTER" spacing="6" prefWidth="180">
+                    <Label text="CHECKOUT"
+                           style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
+                    <Label fx:id="player1CheckoutLabel" text=""
+                           style="-fx-font-size: 28px; -fx-text-fill: #00bfff; -fx-wrap-text: true; -fx-alignment: CENTER; -fx-text-alignment: center;" />
+                </VBox>
+
+                <VBox alignment="CENTER" spacing="10">
+                    <Label fx:id="player1NameLabel" text="Player 1"
+                           style="-fx-font-size: 36px; -fx-text-fill: white;" />
+                    <Label fx:id="player1ScoreLabel" text="501"
+                           style="-fx-font-size: 90px; -fx-font-weight: bold; -fx-text-fill: #00ff00;" />
+
+                    <VBox alignment="CENTER" spacing="6">
+                        <Label fx:id="player1PrevScoreLabel" text="Prev: 0"
+                               style="-fx-font-size: 22px; -fx-text-fill: #cccccc;" />
+                        <Label fx:id="player1AvgLabel" text="3-Dart Avg: 0.00"
+                               style="-fx-font-size: 22px; -fx-text-fill: #bbbbbb;" />
+                    </VBox>
+
+                    <HBox spacing="20" alignment="CENTER">
+                        <Label text="Legs:" style="-fx-font-size: 22px; -fx-text-fill: white;" />
+                        <Label fx:id="player1LegsLabel" text="0"
+                               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: yellow;" />
+                        <Label text="Sets:" style="-fx-font-size: 22px; -fx-text-fill: white;" />
+                        <Label fx:id="player1SetsLabel" text="0"
+                               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: yellow;" />
+                    </HBox>
+                </VBox>
+
+                <VBox alignment="CENTER" spacing="10">
+                    <Label fx:id="player2NameLabel" text="Player 2"
+                           style="-fx-font-size: 36px; -fx-text-fill: white;" />
+                    <Label fx:id="player2ScoreLabel" text="501"
+                           style="-fx-font-size: 90px; -fx-font-weight: bold; -fx-text-fill: #00ff00;" />
+
+                    <VBox alignment="CENTER" spacing="6">
+                        <Label fx:id="player2PrevScoreLabel" text="Prev: 0"
+                               style="-fx-font-size: 22px; -fx-text-fill: #cccccc;" />
+                        <Label fx:id="player2AvgLabel" text="3-Dart Avg: 0.00"
+                               style="-fx-font-size: 22px; -fx-text-fill: #bbbbbb;" />
+                    </VBox>
+
+                    <HBox spacing="20" alignment="CENTER">
+                        <Label text="Legs:" style="-fx-font-size: 22px; -fx-text-fill: white;" />
+                        <Label fx:id="player2LegsLabel" text="0"
+                               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: yellow;" />
+                        <Label text="Sets:" style="-fx-font-size: 22px; -fx-text-fill: white;" />
+                        <Label fx:id="player2SetsLabel" text="0"
+                               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: yellow;" />
+                    </HBox>
+                </VBox>
+
+                <VBox alignment="CENTER" spacing="6" prefWidth="180">
+                    <Label text="CHECKOUT"
+                           style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
+                    <Label fx:id="player2CheckoutLabel" text=""
+                           style="-fx-font-size: 28px; -fx-text-fill: #00bfff; -fx-wrap-text: true; -fx-alignment: CENTER; -fx-text-alignment: center;" />
+                </VBox>
+            </HBox>
+
+            <VBox alignment="CENTER" spacing="15">
+                <Text fx:id="currentPlayerLabel" text="Current Turn: Player 1"
+                      style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-fill: #ffffff;" />
+                <Text fx:id="dartsThrownLabel" text="Darts this turn:"
+                      style="-fx-font-size: 28px; -fx-fill: #dddddd;" />
+                <Text fx:id="messageLabel" text=""
+                      style="-fx-font-size: 34px; -fx-font-weight: bold; -fx-fill: red;" />
+            </VBox>
+
+            <HBox spacing="20" alignment="CENTER">
+                <TextField fx:id="dartInputField"
+                           promptText="Enter dart(s): "
+                           style="-fx-font-size: 22px; -fx-pref-width: 250px; -fx-background-radius: 10; -fx-padding: 10;" />
+
+                <Button fx:id="throwButton" text="⏎"
+                        prefWidth="80" prefHeight="52"
+                        style="-fx-font-size: 22px; -fx-background-radius: 10; -fx-background-color: linear-gradient(#3a3a3a, #1e1e1e);-fx-text-fill: white; -fx-font-weight: bold;" />
+
+                <ToggleButton fx:id="modeToggle"
+                              text="🎯🎯🎯"
+                              prefWidth="100" prefHeight="52"
+                              style="-fx-font-size: 22px; -fx-background-radius: 10; -fx-background-color: #2a6aff; -fx-text-fill: white; -fx-font-weight: bold;" />
+            </HBox>
+        </VBox>
+    </center>
+
+    <padding>
+        <Insets top="50" right="50" bottom="50" left="50" />
+    </padding>
+</BorderPane>
