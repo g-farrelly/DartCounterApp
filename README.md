@@ -41,7 +41,7 @@ C:\Program Files\JavaFX\javafx-sdk-23.0.2
 4. Run this command (update the path to your own JavaFX SDK):
 
 ```bash
-java --module-path "C:\Program Files\JavaFX\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml -jar DartCounter-1.0.jar
+java --module-path "C:\Program Files\JavaFX\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml -jar DartCounterApp-1.0.jar
 ```
 
 - ✅ The DartCounter window should open immediately.
